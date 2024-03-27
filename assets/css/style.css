@@ -1,0 +1,442 @@
+html {
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+     background-color: rgb(255, 255, 255);
+}
+
+#main {
+     height: 1000px;
+}
+
+#header {
+     height: 46px;
+     width: 100vw;
+     background-color: #000;
+     position: fixed;
+     top: 0;
+     z-index: 1;
+}
+
+.nav {
+     display: inline-block;
+}
+
+
+.nav .nav-item {
+     display: inline;
+     position: relative;
+}
+
+.nav a:hover {
+     background-color: rgb(130, 129, 129);
+}
+
+.nav-item .fa-caret-down {
+     font-size: 12px;
+}
+
+.nav-item a {
+     display: inline-block;
+     /* line-height: 46px; */
+     color: white;
+     text-decoration: none;
+     padding: 15px 24px;
+     text-transform: uppercase;
+}
+
+.nav .nav-item:hover .sub-nav {
+     display: block;
+}
+
+.nav .sub-nav {
+     display: none;
+     background-color: white;
+     position: absolute;
+     left: 0;
+     box-shadow: 0px 0px 7px rgb(121, 119, 119);
+}
+
+.sub-nav a {
+     color: black;
+     display: block;
+     padding: 20px 30px 20px 20px;
+}
+
+#header .btn-search {
+     display: inline-block;
+     color: white;
+     float: right;
+     padding: 15px 35px 15px 18px;   
+}
+
+#header .btn-search:hover {
+     background-color: red;
+}
+
+#slider {
+     position: relative;
+     width: 100%;
+     /* height: 100vh; */
+     background-image: url(https://www.w3schools.com/w3css/img_la.jpg);
+     margin-top: 46px;
+     background-position: center;
+     padding-top: 50%;
+     background-size: cover;
+}    
+
+#slider .text-content {
+     position: absolute;
+     bottom: 47px;
+     width: 100%;
+     text-align: center;
+     color: white;
+}
+
+#slider .text-content h1 {
+     font-weight: 500;
+     font-size: 24px;
+}
+
+#slider .text-content p {
+     margin-top: 30px;
+     font-size: 15px;
+}
+
+#container {
+
+}
+
+#content {
+     
+}
+
+#content .content-section {
+     width: 800px;
+     margin: 0 auto;
+     padding-top: 64px;
+     text-align: center;
+}
+
+.content-section .section-heading {
+     letter-spacing: 2px;
+     font-weight: 400;
+}
+
+.content-section .text-content {
+     text-align: justify;
+     line-height: 1.5;
+     font-size: 15px;
+}
+
+.content-section .section-sub-heading {
+     font-style: italic;
+     opacity: 60%;
+     padding-bottom: 10px;
+}
+
+.photo-band-member {
+     margin: 0 auto;
+}
+
+/* Chiều rộng: Bạn vẫn có thể đặt chiều rộng cho một phần tử inline bằng cách sử dụng thuộc tính width. Tuy nhiên, chiều rộng sẽ không được áp dụng nếu bạn đặt nó thành một giá trị cố định (px, %) trừ khi bạn đặt thuộc tính display của phần tử thành block hoặc inline-block.
+
+Chiều cao: Tương tự, bạn vẫn có thể đặt chiều cao cho một phần tử inline bằng cách sử dụng thuộc tính height. Tuy nhiên, chiều cao cũng sẽ không có hiệu lực nếu bạn đặt nó thành một giá trị cố định trừ khi bạn đặt thuộc tính display của phần tử thành block hoặc inline-block.
+
+Khi bạn đặt thuộc tính display thành inline, phần tử sẽ không hiển thị như một khối, vì vậy các thuộc tính như width và height có thể không có hiệu lực như mong đợi. Để đảm bảo rằng các thuộc tính này có hiệu lực, bạn có thể sử dụng display: inline-block thay vì display: inline. */
+
+/* Khi bạn đặt thuộc tính display của một phần tử HTML thành inline, phần tử đó sẽ hiển thị như một phần của văn bản, nghĩa là nó sẽ không tạo ra một "block" mới mà sẽ chiếm chiều rộng của văn bản xung quanh. Do đó, nếu bạn đặt một phần tử <div> có thuộc tính display: inline bên trong một phần tử khác, nó sẽ không tạo ra một khối mới và sẽ lấy kích thước theo chiều rộng của văn bản chứa nó.
+
+Ngược lại, khi bạn đặt thuộc tính display thành inline-block, phần tử sẽ được hiển thị như một khối và cũng là một phần của luồng văn bản, nhưng nó vẫn giữ được các đặc tính của một phần tử khối, bao gồm cả việc có thể thay đổi kích thước và canh lề. Do đó, khi bạn đặt một phần tử <div> với thuộc tính display: inline-block bên trong một phần tử khác, nó sẽ hiển thị như một khối riêng biệt, không lấy kích thước theo chiều rộng của phần tử cha.
+
+Vậy nên, để giải quyết vấn đề của bạn, bạn nên sử dụng display: inline-block thay vì display: inline để đảm bảo rằng phần tử <div> sẽ không lấy kích thước theo chiều rộng của phần tử cha chứa nó. */
+
+.photo-band-member .box-photo {
+     height: 222px;
+     width: 256px;
+     display: inline-block;
+}
+
+.photo-band-member .photo {
+     height: 154px;
+     border-radius: 5px;
+}
+
+.photo-band-member .box-photo:hover .photo {
+     opacity: 60%;
+     transition: 0.5s;
+     box-shadow: 0 0 7px black;
+}
+
+.photo-band-member .box-photo:hover p {
+     font-weight: bold;
+}
+
+#container .tour-dates {
+     width: 100%;
+     height: 1000px;
+     background-color: black;
+     
+}
+
+.tour-dates {
+     margin-top: 100px;
+}
+
+.tour-dates .content {
+     width: 800px;
+     height: 850px;
+     margin: 20px auto;
+}
+
+.tour-dates .text-content {
+     color: white;
+     text-align: center;
+     padding-top: 80px;
+}
+
+.tour-dates .title {
+     font-weight: 400;
+}
+
+.tour-dates .sub-title {
+     font-style: italic;
+     opacity: 60%;
+     
+     margin: 20px 0 60px 0;
+}
+
+.month-box .box {
+     width: 775px;
+     height: 40px;
+     background-color: white;
+     position: relative;
+     line-height: 40px;
+     padding-left: 25px;
+}
+
+.month-box .month-2 {
+     border-top: 1px solid rgb(210, 208, 208);
+     border-bottom: 1px solid rgb(210, 208, 208);
+}
+
+.month-box .month-text {
+     opacity: 70%;
+     margin: 0;
+}
+
+.month-box .sold-out {
+     font-size: 15px;
+     color: white;
+     margin: 0;
+     background-color: red;
+     display: inline-block;
+     position: absolute;
+     top: 7px;
+     left: 128px;
+     line-height: 22px;
+     padding: 2px 10px;
+
+}
+
+.month-box .remaining-tickets {
+     color: white;
+     font-size: 14px;
+     line-height: 10px;
+     position: absolute;
+     top: 3px;
+     right: 20px;
+     background-color: black;
+     margin: 0;
+     padding: 12px;
+     clip-path: circle(40%);
+}
+
+.month-box .sold-out:hover {
+     box-shadow: 0 0 7px rgb(255, 0, 0);
+}
+
+.month-box .remaining-tickets:hover {
+     opacity: 60%;
+}
+
+.tickets {
+     margin-top: 60px;
+}
+
+.tickets .container {
+     display: flex;
+     justify-content: space-between;
+}
+
+.tickets .tickets-box {
+     width: 250px;
+     height: 388px;
+     background-color: white;
+}
+
+.tickets-box .ticket-photo {
+     width: 100%;
+     height: 183px;
+}
+
+.tickets-box .ticket-info {
+
+}
+
+.ticket-info .title {
+     font-weight: bold;
+     text-align: center;
+}
+
+.ticket-info .date {
+     font-style: italic;
+     opacity: 60%;
+     text-align: center;
+}
+
+.ticket-info .sub {
+     line-height: 1.4;
+     text-align: center;
+}
+
+.ticket-info .btn-buy {
+     font-weight: bold;
+     width: 99px;
+     text-decoration: none;
+     color: white;
+     background: black;
+     padding: 12px 20px;
+     margin: 8px auto;
+     display: block;
+     text-align: center;
+     border-radius: 3px;
+     
+}
+
+.ticket-info .btn-buy:hover {
+     background-color: rgb(161, 158, 158);
+     color: black;
+     box-shadow: 0 0 8px black;
+}
+
+.tickets .tickets-box:hover {
+     box-shadow: 0px 0px 20px whitesmoke;
+     transition-duration: 0.5s;
+     transform: scale(1.05, 1.05);
+}
+
+#container .contact {
+     width: 950px;
+     height: 670px;
+     margin: 20px auto;
+}
+
+.contact .title {
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+}
+
+.contact .contact-content {
+     margin-top: 100px;
+     display: flex;
+     justify-content: space-between;
+}
+
+.contact-content i {
+     margin-right: 10px;
+}
+
+.contact-content .infor {
+     margin-left: 80px;
+     font-size: 20px;
+}
+
+.form-container {
+     width: 470px;
+     height: 150px;
+}
+
+.form-container .name, .email {
+     margin-right: 11px;
+     width: 165px;
+     height: 40px;
+     opacity: 70%;
+     padding-left: 15px;
+}
+
+.form-container .mess {
+     margin-top: 10px;
+     width: 368px;
+     height: 40px;
+     opacity: 70%;
+     padding-left: 15px;
+}
+
+.form-container .btn-send {
+     text-decoration: none;
+     color: white;
+     background-color: black;
+     padding: 14px;
+     float: right;
+     margin: 20px 80px 0 0;
+}
+
+.form-container .btn-send:hover {
+     background-color: rgb(162, 160, 160);
+     color: black;
+     transition-duration: 0.5s;
+}
+
+.foot-img {
+     width: 100%;
+}
+
+#footer {
+     width: 200px;
+     height: 100px;
+     margin: 40px auto 0 auto;
+}
+
+#footer .logo-social {
+     display: flex;
+     justify-content: space-around;
+     font-size: 35px;
+}
+
+.logo-social a {
+     color: #9494948c;
+}
+
+.logo-social .fa-square-facebook:hover {
+     color: rgb(20, 16, 227);
+     transition-duration: 0.6s;
+}
+
+.logo-social .fa-square-instagram:hover {
+     color: orangered;
+     transition-duration: 0.6s;
+}
+
+.logo-social .fa-square-snapchat:hover {
+     color: rgb(251, 255, 0);
+     transition-duration: 0.6s;
+}
+
+.logo-social .fa-square-youtube:hover {
+     color: rgb(255, 0, 0);
+     transition-duration: 0.6s;
+}
+
+.logo-social .fa-square-twitter:hover {
+     color: rgb(0, 174, 255);
+     transition-duration: 0.6s;
+}
+
+#footer p {
+     opacity: 60%;
+     text-align: center;
+     font-size: 15px;
+}
