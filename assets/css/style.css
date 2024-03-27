@@ -35,6 +35,9 @@ body {
 
 .nav-item .fa-caret-down {
      font-size: 12px;
+     display: inline-block;
+     position: absolute;
+     right: 9px;
 }
 
 .nav-item a {
@@ -346,7 +349,8 @@ Vậy nên, để giải quyết vấn đề của bạn, bạn nên sử dụng
 }
 
 .contact-content i {
-     margin-right: 10px;
+     height: 40px;
+     width: 40px;
 }
 
 .contact-content .infor {
